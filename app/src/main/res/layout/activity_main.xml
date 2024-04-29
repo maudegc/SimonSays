@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/triangleRouge"
+        android:layout_width="183dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:onClick="onClick"
+        android:tag="0"
+        app:layout_constraintBottom_toTopOf="@+id/triangleBleu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/triangleVert"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trianglerouge" />
+
+    <ImageButton
+        android:id="@+id/triangleVert"
+        android:layout_width="183dp"
+        android:layout_height="188dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="130dp"
+        android:onClick="onClick"
+        android:tag="3"
+        app:layout_constraintBottom_toTopOf="@+id/triangleJaune"
+        app:layout_constraintEnd_toStartOf="@+id/triangleRouge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trianglevert" />
+
+    <ImageButton
+        android:id="@+id/triangleJaune"
+        android:layout_width="183dp"
+        android:layout_height="188dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="onClick"
+        android:tag="2"
+        app:layout_constraintEnd_toStartOf="@+id/triangleBleu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/triangleVert"
+        app:srcCompat="@drawable/trianglejaune" />
+
+    <ImageButton
+        android:id="@+id/triangleBleu"
+        android:layout_width="183dp"
+        android:layout_height="188dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:onClick="onClick"
+        android:tag="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/triangleJaune"
+        app:layout_constraintTop_toBottomOf="@+id/triangleRouge"
+        app:srcCompat="@drawable/trianglebleu" />
+
+    <Button
+        android:id="@+id/buttonSimon"
+        android:layout_width="100dp"
+        android:layout_height="104dp"
+        android:text="@string/commencer"
+        app:backgroundTint="#000000"
+        app:cornerRadius="500dp"
+        app:layout_constraintBottom_toBottomOf="@+id/triangleBleu"
+        app:layout_constraintEnd_toEndOf="@+id/triangleRouge"
+        app:layout_constraintStart_toStartOf="@+id/triangleJaune"
+        app:layout_constraintTop_toTopOf="@+id/triangleVert"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="71dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Score"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/triangleJaune" />
+
+    <TextView
+        android:id="@+id/meilleurScore"
+        android:layout_width="121dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/meilleurScore"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <TextView
+        android:id="@+id/simon"
+        android:layout_width="228dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="36dp"
+        android:text="SIMON"
+        android:textColor="#673AB7"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/triangleVert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/niveau"
+        android:layout_width="63dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:text="@string/niveau"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toEndOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@+id/triangleBleu" />
+
+    <TextView
+        android:id="@+id/scoreInt"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:text="-"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@+id/triangleJaune" />
+
+    <TextView
+        android:id="@+id/niveauInt"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:text="-"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/niveau"
+        app:layout_constraintTop_toBottomOf="@+id/triangleBleu" />
+
+    <TextView
+        android:id="@+id/meilleurScoreInt"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:text="-"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/meilleurScore"
+        app:layout_constraintTop_toBottomOf="@+id/scoreInt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

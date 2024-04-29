@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="niveau">Niveau</string>
+    <string name="meilleurScore">Meilleur score</string>
+    <string name="commencer">Commencer</string>
+    <string name="recommencer">Recommencer</string>
+    <string name="continuer">Continuer</string>
+    <string name="felicitaion">FÉLICITATION</string>
+    <string name="finDePartie">FIN DE LA PARTIE</string>
+</resources>
